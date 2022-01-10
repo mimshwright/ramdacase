@@ -1,0 +1,77 @@
+{
+  "name": "ramdacase",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "functional",
+    "ramda",
+    "camel-case",
+    "pascal-case",
+    "snake-case",
+    "text-transform"
+  ],
+  "author": "Mims Wright",
+  "main": "dist/index.js",
+  "module": "dist/ramdacase.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "publish": "npm np"
+  },
+  "peerDependencies": {
+    "ramda": "^0.27.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "@types/ramda": "^0.27.62",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "babel-jest": "^26.6.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-import-resolver-ts": "^0.4.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-ramda": "^2.5.1",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "size-limit": "^4.6.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  },
+  "optionalDependencies": {
+    "np": "^7.2.0",
+    "yarn": "^1.22.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "dist/ramdacase.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/ramdacase.esm.js",
+      "limit": "10 KB"
+    }
+  ]
+}
