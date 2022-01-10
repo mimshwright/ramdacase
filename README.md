@@ -1,4 +1,4 @@
-# reamdacase
+# ramdacase
 
 [![NPM](https://nodei.co/npm/ramdacase.png)](https://nodei.co/npm/ramdacase/)
 
