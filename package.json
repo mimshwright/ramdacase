@@ -8,7 +8,12 @@
     "camel-case",
     "pascal-case",
     "snake-case",
-    "text-transform"
+    "command-case",
+    "capitalize",
+    "text-transform",
+    "split",
+    "toWords",
+    "string"
   ],
   "author": "Mims Wright",
   "main": "dist/index.js",
@@ -42,12 +47,15 @@
     "@typescript-eslint/parser": "^4.5.0",
     "babel-jest": "^26.6.0",
     "eslint": "^7.11.0",
-    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^6.13.0",
     "eslint-import-resolver-ts": "^0.4.2",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-ramda": "^2.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
     "size-limit": "^4.6.0",
@@ -56,7 +64,7 @@
     "typescript": "^4.0.3"
   },
   "optionalDependencies": {
-    "np": "^7.2.0",
+    "np": "^7.6.0",
     "yarn": "^1.22.10"
   },
   "husky": {
