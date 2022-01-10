@@ -1,6 +1,6 @@
 {
   "name": "ramdacase",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "keywords": [
     "functional",
@@ -30,11 +30,10 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "tsdx lint",
+    "lint": "eslint ./{src,test}/**/*.ts",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "publish": "npm np"
+    "analyze": "size-limit --why"
   },
   "peerDependencies": {
     "ramda": "^0.27.1"
@@ -43,21 +42,20 @@
     "@babel/core": "^7.12.10",
     "@size-limit/preset-small-lib": "^4.6.0",
     "@types/ramda": "^0.27.62",
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
     "babel-jest": "^26.6.0",
     "eslint": "^7.11.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^6.13.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
     "eslint-import-resolver-ts": "^0.4.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-ramda": "^2.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^4.3.0",
-    "np": "^7.6.0",
     "prettier": "^2.1.2",
     "size-limit": "^4.6.0",
     "tsdx": "^0.14.1",
@@ -69,7 +67,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "npm run lint"
     }
   },
   "size-limit": [
