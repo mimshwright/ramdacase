@@ -1,4 +1,4 @@
-import R from "ramda";
+import * as R from "ramda";
 
 type Unary<Param, Return> = (_: Param) => Return;
 type StringToString = Unary<string, string>;
